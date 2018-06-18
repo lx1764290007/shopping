@@ -1,0 +1,642 @@
+/* 浏览器默认边距不同,初始化为0 */
+* {
+    margin: 0;
+    padding: 0;
+}
+table th, table td {
+    text-align: center;
+}
+html {
+    width: 100%;
+    min-width: 1024px;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414555, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414555, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+    font-family: Simsong,FongSong,Helvetica, sans-serif,Arial;
+    font-size: 16px;
+    width: 100%;
+    min-width: 1024px;
+    height: 100%;
+    color: whitesmoke;
+}
+a {
+    text-decoration: none;
+    color: #00bfff;
+}
+a:hover {
+    color: #00cfff;
+    text-decoration: underline;
+}
+ul li {
+    list-style: none;
+}
+.wrap {
+    min-width: 1024px;
+    overflow: hidden;
+}
+/*  --------------
+
+   搜索栏-LOGO-登陆注册
+
+   -----------------*/
+
+.header {
+    width: 100%;
+    min-width: 1024px;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding: 2em 0;
+}
+span.header-logo {
+    width: 15%;
+    float: left;
+    margin: 5px 0 0 9%;
+}
+span.header-logo img {
+    width: 100%;
+    height: 5em;
+}
+.input-search-wrap {
+    border: none;
+    display: inline;
+    float: left;
+    margin-left: 7%;
+    overflow: hidden;
+    margin-top: 1.5em;
+}
+input.search {
+    width: 22em;
+    height: 2.6em;
+    padding: 0 1rem;
+    border-top: 2px solid #93b5f6;
+    border-left:  2px solid #00cfff;
+    border-bottom: 2px solid #00cfff;
+    border-right: 2px solid #00cfff;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    color: hsla(60,10%,10%,1.0);
+    font-size: 0.8em;
+    float: left;
+}
+
+input.search:focus {
+    background-color: whitesmoke;
+    outline-offset: 2px;
+}
+
+input.btn {
+    width: 6em;
+    height: 3em;
+    margin-top: -0.2em;
+    background: #00cfff;  /* 老旧浏览器 */
+    background: -webkit-linear-gradient(to bottom, #93b5f6, #00cfff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #93b5f6, #00cfff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: whitesmoke;
+
+}
+
+
+/* 个人中心 */
+.header ul.login {
+    float: left;
+    margin-left: 11%;
+    display: block;
+    margin-top: 1em;
+}
+.header ul.login li {
+    list-style: none;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    margin-right: 1em;
+}
+.header ul.login li::after {
+    content: "·";
+}
+
+.header ul.login li i {
+    font-size: 2em;
+    color: #f5f7f7;
+}
+.header ul.login li i:hover {
+    color: #cccccc;
+}
+.header ul.login li a {
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-width: 1024px;
+    padding: 0.5em 0;
+    background-color: #f0f0f0;
+    font-size: 12px;
+    box-sizing: content-box;
+    color: #414555;
+}
+header ul.left {
+    position: relative;
+    margin-left: 2em;
+}
+header ul.left li {
+    float: left;
+}
+header ul.right {
+    position: relative;
+    float: right;
+}
+header ul.right li {
+    float: left;
+    margin-right: 2em;
+    display: block;
+}
+
+header ul.right li ul {
+    position: absolute;
+    z-index: 200;
+    display: none;
+}
+
+.search-text {
+    margin-top: 0.6em;
+}
+.search-text a {
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+.search-text a:hover {
+    text-decoration: none;
+    color: #00cfff;
+}
+.search-text a::after {
+    content: " | ";
+    color: #f0f0f0;
+}
+
+.content-main {
+    margin: 3% 3%;
+    width: 100%;
+    min-width: 1024px;
+    position: relative;
+    float: left;
+}
+
+
+.content-main span {
+    position: relative;
+    width: 20%;
+    float: left;
+    margin: 20px 5% 0 0;
+    background-color: hsla(0,120%,240%,0.4);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.content-main span img{
+    width: 100%;
+    max-width: 100%;
+}
+.content-main span a {
+    position: absolute;
+    margin-left: 32%;
+    margin-top: -39%;
+    display: block;
+    border: 1px solid #eeeeee;
+    padding: 5% 10%;
+    text-decoration: none;
+    color: hsla(120,60%,100%,0.8);
+}
+.content-main span a:hover {
+    border-color: #00bfff;
+    background-color: hsla(0,100%,50%,0.2);
+    text-decoration: underline;
+}
+.content-main-soon {
+    margin: 3% 0;
+    width: 100%;
+    min-width: 1024px;
+    position: relative;
+    float: left;
+}
+.content-main-soon span {
+    position: relative;
+    width: 21%;
+    float: left;
+    margin: 20px 0 0 9%;
+    background-color: hsla(0,120%,240%,0.4);
+    z-index: 10;
+    cursor: pointer;
+    overflow: hidden;
+}
+.content-main-soon span img{
+    width: 100%;
+    max-width: 100%;
+}
+ fieldset {
+    border-color: hsla(100,40%,60%,0.8);
+    border-width: 1px 0 0 0;
+    padding-top: 3em;
+     z-index: -1;
+}
+ fieldset legend {
+    margin-left: 15%;
+     font-size: large;
+     color: whitesmoke;
+}
+.content-main-soon span img{
+    width: 100%;
+    max-width: 100%;
+}
+
+.content-main-soon span a.soon {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-top: -8%;
+    display: block;
+    text-decoration: none;
+    background: hsla(360,5%,6%,0.8);
+    padding: 2% 0;
+    z-index: 30;
+    text-align: center;
+    color: whitesmoke;
+}
+.content-main-soon span a.decoration {
+    width: 100%;
+    height: 70%;
+    margin-top: -44%;
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    background: hsla(360,5%,6%,0.8);
+    z-index: 2000;
+    text-align: justify;
+    font-size: 12px;
+    text-indent: 2em;
+    line-height: 1.5em;
+    color: whitesmoke;
+    padding-top: 1.5em;
+    word-break: break-all;
+    letter-spacing: 1px;
+}
+.jiao_biao {
+    color: #fff;
+    height: 1.5em;
+    width: 100px;
+    position: absolute;
+    font-size: 1em;
+    right: -30px;
+    text-align: center;
+    line-height: 1.2em;
+    word-spacing: 1px;
+    font-family: "FongSong",fantasy;
+    background-color: #0c60ee;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.jiao_biao-hot {
+    color: #fff;
+    height: 1.5em;
+    width: 5em;
+    position: absolute;
+    font-size: 0.8em;
+    right: -1.3em;
+    top: 0.7em;
+    text-align: center;
+    line-height: 1.2em;
+    word-spacing: 1px;
+    font-family: "FongSong",fantasy;
+    background-color: hsla(5,80%,50%,0.8);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*折扣*/
+.rebate span {
+    width: 25%;
+    height: 25em;
+    float: left;
+}
+.rebate span:nth-child(2n+1){
+    margin-left: 5%;
+}
+.rebate span img {
+    width: 100%;
+    height: 100%;
+}
+.rebate span a.soon {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-top: -12%;
+    display: block;
+    text-decoration: none;
+    background: hsla(360,5%,6%,0.8);
+    padding: 2% 0;
+    z-index: 30;
+    text-align: center;
+    color: whitesmoke;
+}
+.rebate span a.decoration {
+    width: 100%;
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    background: hsla(360,5%,6%,0.8);
+    z-index: 2000;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.5em;
+    color: whitesmoke;
+    padding-top: 1.5em;
+    word-break: break-all;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.rebate span del {
+    color: #0c60ee;
+}
+.dp {
+    display:block;
+}
+.tc {
+    text-align: center;
+}
+.fl {
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clear {
+    clear:both;
+}
+.clearfix:after {
+    content:".";
+    display:block;
+    visibility:hidden;
+    height:0;
+    clear:both;
+}
+.main-page {
+    width: 100%;
+    min-width: 1024px;
+    overflow: hidden;
+    margin-left: 2%;
+}
+.main-page .left{
+    border-right: 1px #fff solid;
+    margin-top: 2em;
+    width: 8em;
+    min-width: 6em;
+    padding-right: 1em;
+}
+.main-page .left, .main-page .right {
+    float:left;
+}
+.main-page .nav-back {
+    height: 20em;
+    max-width: 8em;
+
+}
+.main-page .nav {
+    position: relative;
+    margin-top: -20em;
+    width: 8em;
+    text-align: center;
+    font-size: 1em;
+    color: whitesmoke;
+    overflow: hidden;
+}
+.main-page .nav li {
+    height: 3em;
+    line-height: 3em;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+.main-page .nav li.on {
+    background:#3091f2;
+}
+.main-page .right {
+    width: 80%;
+    min-width: 80%;
+    margin-left: 1%;
+    overflow: hidden;
+}
+.main-page .content {
+    position: relative;
+    width: 60em;
+    height:800px;
+    overflow:hidden;
+}
+.main-page .content .con-ggh {
+    width: 60em;
+    height:800px;
+    overflow: hidden;
+}
+.con-ggh ul {
+    margin-top: 2em;
+}
+.con-ggh ul li {
+    margin-right: 2em;
+    margin-left: 1em;
+    margin-top: 1em;
+    float:left;
+    cursor: pointer;
+}
+.list-pic {
+    background-color: rgba(255,255,255,0.3);
+    border: 1px solid #b9babe;
+    padding: 0.5em;
+    border-radius: 2px;
+}
+.list-pic:hover {
+    border-color: #3091f2;
+    box-shadow: inset 2px 2px 7px #00cfff;
+}
+.list-pic span {
+    width: 15em;
+    padding: 0.7em 0;
+    position: absolute;
+    margin-top: 15.4em;
+    display: block;
+    background: hsla(360,5%,6%,0.8);
+    z-index: 30;
+    text-align: center;
+    color: whitesmoke;
+    font-family: "FongSong",Arial,Simsong,Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+.list-pic img {
+    width: 15em;
+    height: 18em;
+    display: block;
+}
+.con-ggh .item-name {
+    height: 1em;
+    width: 16em;
+    font-size: 1em;
+    text-align: center;
+    color: #fff;
+    line-height: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.right_nav {
+    background: hsla(360,5%,6%,0.6);
+    top: 33%;
+    z-index: 53;
+    position: fixed;
+    right: 1px;
+    padding: 2em 0;
+}
+.right_nav ul {
+    width: 4em;
+    padding: 0;
+}
+.right_nav i {
+    font-size: 2em;
+    color: hsla(360,90%,100%,1);
+}
+.right_nav li{
+    width: 100%;
+    height: 2.3em;
+    text-align: center;
+    list-style: none;
+    margin-top: 1.5em;
+    float: left;
+}
+.right_nav li:nth-child(2):hover .account{
+    display: block;
+}
+.right_nav li:nth-child(3):hover .share{
+    display: block;
+}
+.right_nav li a {
+    text-decoration: none;
+    padding: 0.5em
+}
+.right_nav li:hover {
+    background: hsla(10,2%,70%,0.8);
+}
+.right_nav li ul.account {
+    position: absolute;
+    margin-left: -9em;
+    margin-top: -3.7em;
+    z-index: 50;
+    display: none;
+    width: auto;
+    padding: 0;
+}
+.right_nav li ul.account li {
+    float: left;
+    line-height: 2.5em;
+    width: auto;
+    padding: 0;
+}
+.right_nav li ul.share {
+    position: absolute;
+    margin-left: -12.2em;
+    z-index: 50;
+    margin-top: -3.7em;
+    display: none;
+    width: auto;
+    padding: 0;
+}
+.right_nav li ul.share li {
+    float: left;
+    line-height: 2.5em;
+    width: auto;
+    padding: 0;
+}
+/*top fixed*/
+
+.top_nav {
+    width: 100%;
+    height: 3em;
+    background: hsla(360, 5%, 6%, 0.9);
+    top: 0;
+    position: fixed;
+    text-align: center;
+    z-index: 555;
+    display: none;
+}
+.top_nav ul {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.top_nav ul li {
+    float: left;
+    max-width: 8em;
+    height: 100%;
+    max-height: 3em;
+    padding-top: 0.8em;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+.top_nav ul li a:hover {
+    background: hsl(360,5%,30%);
+}
+.top_nav ul li a {
+    color: whitesmoke;
+    padding: 2em;
+}
+i.qq {
+    color: hsla(200,80%,50%,1);
+}
+i.weixin {
+    color: hsla(120,80%,60%,1);
+}
+i.moment {
+    color: hsla(80,60%,60%,1)
+}
+i.weibo {
+    color: hsla(360,70%,60%,1)
+}
+
+
+footer {
+    margin-top: 10%;
+    width: 100%;
+    min-width: 1024px;
+    text-align: left;
+    background-color: #232526;
+    font-size: 14px;
+    padding: 1em 0;
+    color: hsl(80,80%,30%);
+    line-height: 25px;
+}
+footer div {
+    margin-left: 35%;
+    text-shadow: 1px 1px 1px blue;
+}
+footer h3 {
+    line-height: 50px;
+}
+footer img {
+    display: block;
+    width: 120px;
+    height: 130px;
+    position: relative;
+    margin-left: 30%;
+    margin-top: -15%;
+}

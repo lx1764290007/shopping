@@ -1,0 +1,80 @@
+/* 首页轮播图 */
+.banner {
+    margin-top: 1px;
+    margin-bottom: 0;
+    position: relative;
+    float: left;
+    overflow: auto;
+    text-align: center;
+    width: 100%;
+    min-width: 1024px;
+    z-index: 100;
+}
+.banner li {
+    list-style: none;
+}
+.banner ul li {
+    float: left;
+}
+#img_scroll {
+    max-width: 100%;
+    z-index: 10;
+}
+#img_scroll .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+}
+#img_scroll .dots li {
+    display: inline-block;
+    width: 180px;
+    height: 20px;
+    margin: 0 1px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-indent: 200em;
+    opacity: 0.6;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+}
+#img_scroll .dots img {
+    width: 181px;
+    position: relative;
+    margin-bottom: 21px;
+    z-index: 5;
+    box-shadow: 1px 2px 5px gray;
+    opacity: 0;
+}
+#img_scroll .dots li:hover {
+    background: #fff665;
+    opacity: 0.4;
+}
+#img_scroll .dots li.active {
+    background: #9f9666;
+    opacity: 1;
+}
+#img_scroll .arrow {
+    position: absolute;
+    top: 50%;
+    display: none;
+}
+#img_scroll #al {
+    left: 15px;
+}
+#img_scroll #ar {
+    right: 15px;
+}
+li.decoration {
+    max-width: 16em;
+    height: auto;
+    position: relative;
+    top: -500px;
+    left: 60%;
+    z-index: 3;
+    text-align: left;
+    line-height: 2em;
+    word-break: keep-all;
+}
